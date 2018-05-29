@@ -1675,8 +1675,8 @@ glColor3f(0.5,0.7,0.9);
 drawstring(50.0,100.0,0.0,"PRESS j KEY TO NAVIGATE TO glutMainLoop specification");
 glColor3f(0.5,0.1,0.9);
 drawstring(200.0,70.0,0.0,"");
-glColor3f(0.5,0.1,0.9);
-drawstring(200.0,50.0,0.0,"PRESS y TO GOTO NEXT SCREEN");
+glColor3f(0.3,0.6,0.9);
+drawstring(200.0,50.0,0.0,"PRESS 'y' KEY TO GOTO NEXT SCREEN");
 glFlush();
 }
 
@@ -1788,9 +1788,7 @@ drawstring(80.0,100.0,0.0,"The gluLookAt function provides an easy and intuitive
 glColor3f(0.5,0.1,0.9);
 drawstring(80.0,70.0,0.0,"Basically it has three groups of parameters, each one is composed of 3 floating point values.");
 glColor3f(0.5,0.7,0.9);
-drawstring(200.0,50.0,0.0,"PRESS 't' KEY TO NAVIGATE TO gluLookAt specification ");
-glColor3f(0.5,0.7,0.9);
-drawstring(200.0,20.0,0.0,"PRESS 'v' KEY TO NAVIGATE TO next screen ");
+drawstring(200.0,30.0,0.0,"PRESS 't' KEY TO NAVIGATE TO gluLookAt specification ");
 glFlush();
 }
 
@@ -2084,7 +2082,6 @@ void processFontMenu(int option) {
 void createPopupMenus() {
 
 	fontMenu = glutCreateMenu(processFontMenu);
-
 	glutAddMenuEntry("Basics Of OpenGL",basics );
 	glutAddMenuEntry("main() function",mainf );
 	glutAddMenuEntry("Reshape Basics",reshape  );
@@ -2095,8 +2092,6 @@ void createPopupMenus() {
     mainMenu = glutCreateMenu(processMainMenu);
     glutAddSubMenu("Navigate",fontMenu);
 	glutAttachMenu(GLUT_RIGHT_BUTTON);
-
-	// this will allow us to know if the menu is active
 	glutMenuStatusFunc(processMenuStatus);
 }
 void myinit()
@@ -2119,9 +2114,7 @@ glutCreateWindow("OpenGL Documentation");
 /*call back functions*/
 glutDisplayFunc(mydisplay);
 glutKeyboardFunc(myKeyboard);
-//glutMouseFunc(myMouse);
-	// init Menus
-	createPopupMenus();
+createPopupMenus();
 myinit();
 glutMainLoop();
 }
