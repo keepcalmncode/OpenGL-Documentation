@@ -104,6 +104,8 @@ glColor3f(0.5,0.1,0.9);
 drawstring(200.0,250.0,0.0," p -> glutInitDisplayMode             q -> glutCreateWindow             r -> glutReshapeFunc");
 glColor3f(0.5,0.1,0.9);
 drawstring(200.0,200.0,0.0," s -> glutIdleFunc                     t -> gluLookAt             ");
+glColor3f(1.0,0.7,0.9);
+drawstring(300.0,110.0,0.0,"RIGHT-CLICK THE MOUSE BUTTON TO OPEN NAVIGATION MENU");
 glColor3f(1.0,1.0,0.9);
 drawstring(300.0,70.0,0.0,"PRESS 'w' KEY TO NAVIGATE TO PROGRAMMING BASICS IN OPENGL");
 glColor3f(1.0,0.7,0.9);
