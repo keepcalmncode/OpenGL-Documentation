@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<GL/glut.h>
+#pragma GCC diagnostic ignored "-Wwrite-strings"
 void mydisplay();
 void display();
 void frontsreen();
