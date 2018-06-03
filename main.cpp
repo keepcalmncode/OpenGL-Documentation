@@ -6,7 +6,6 @@ void display();
 void frontsreen();
 void drawstring();
 void setFont();
-//void myMouse();
 void helpscreen();
 void *currentfont;
 GLint flag=0;
